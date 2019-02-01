@@ -10,5 +10,20 @@ before do
 end
 
 get '/' do
-  'こんにちは'
+  @number = Count.first.number
+  erb :index
+end
+
+post '/plus' do
+  count = Count.first
+  count.number = count.number + 1
+  count.save
+  redirect '/'
+end
+
+post "/minus" do
+  count = Count.first
+  count.number = count.number - 1
+  count.save
+  redirect '/'
 end

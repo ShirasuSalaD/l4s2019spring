@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/count.css">
 </head>
 <body>
-
+    <h1><%= @number %></h1>
+    <form action="/plus" method="POST">
+      <input type="submit" value="+">
+    </form>
+    <form action="/minus" method="POST">
+      <input type="submit" value="-">
+    </form>
 </body>
 </html>
