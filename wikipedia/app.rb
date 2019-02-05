@@ -5,9 +5,12 @@ require 'sinatra/reloader' if development?
 require 'net/http'
 require 'uri'
 
-get '/:keyword' do
+get '/' do
   base_url = 'http://wikipedia.simpleapi.net/api?output=html&keyword='
-  keyword = params[:keyword]
-  url = URI.parse(base_url+keyword)
-  Net::HTTP.get(url)
+  if params[:keyword]
+    keyword = URI.escape(paramas[:keyword])
+    url = URI.parse(base_url+keyword)
+    @result = Net::HTTP.get(url).force_encording("utf-8")
+  end
+  erb :index
 end

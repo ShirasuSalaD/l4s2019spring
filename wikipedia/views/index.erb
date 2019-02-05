@@ -2,8 +2,20 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title>タイトル</title>
+	<title>Wikipedia</title>
+	<style>
+	body{
+		font-family:"游ゴシック","Yu Gothic",sans-selif;
+		background-color:#111111;
+		background-image:url("00-33.jpg")
+	}
+	</style>
 </head>
 <body>
+	<form action="/" method="get">
+		<input type="text" name="keyword">
+		<input type="submit" value="検索">
+	</form>
+	<%= @result %>
 </body>
 </html>
