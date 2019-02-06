@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>もりもー最寄り駅検索</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 <table>
@@ -13,5 +14,34 @@
 		</tr>
 	<% end %>
 </table>
+
+<%# 005_JavaScriptの教科書に「前の駅」についてこの箇所書いていなかった（app.rbのところは書いてあった） %>
+<div id="detail">
+	<h2>前の駅</h2>
+	<div class="prev"></div>
+</div>
+
+<div id="detail">
+	<h2>次の駅</h2>
+	<div class="next"></div>
+</div>
+
+<script>
+window.onload = function(){
+	$(".station").click(function(){
+		var line = $(".line",this).text();
+		var name = $(".name",this).text();
+		$.ajax( "/api/station",{
+			type: "GET",
+			data: {"line": line, "name": name},
+			datatype: 'json'
+		})
+		.done(function(json){
+			$("#detail .next").text(json["next"])
+			$("#detail .prev").text(json["prev"]) //ここも書いていなかった
+		});
+	});
+}
+</script>
 </body>
 </html>
