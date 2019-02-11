@@ -10,5 +10,13 @@
       <input type="text" name="y" id="y" placeholder="y" />
       <input type="submit" value="検索" />
     </form>
+    <h2>検索履歴</h2>
+    <table>
+      <% @histories.each do |history| %>
+        <tr>
+          <td><%= histories.x %>, <%= histories.y %></td>
+        </tr>
+      <% end %>
+    </table>
   </body>
 </html>
