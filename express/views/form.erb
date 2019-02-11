@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>フォーム</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel= "shortcut icon" href="favicon.ico">
+    <meta name="description" content ="緯度経度から最寄り駅を表示させるサイトです。">
+    <meeta property="og:image" content="https://express.logo.png">
   </head>
   <body>
     <form action="list" method="get">
@@ -16,9 +19,31 @@
     <table>
       <% @histories.each do |history| %>
         <tr>
-          <td><%= histories.x %>, <%= histories.y %></td>
+          <td><%= history.x %>, <%= history.y %></td>
+          <td>
+            <% if history.favorite %>
+              <form action="<%= history.id %>/update" method="post">
+                <input type="submit" value="解除">
+              </form>
+            <% else %>
+              <form action="<%= history.id %>/update" method="post"
+                <input type="submit" value="お気に入り">
+              </form>
+            <% end %>
+          </td>
+          <td>
+            <form action="<%= history.id %>/delete" method="post">
+              <input type="submit" value="削除">
+            </form>
+          </td>
         </tr>
       <% end %>
     </table>
+    <h2>お気に入り</h2>
+    <ul>
+      <% @favorites.each do |favorite| %>
+        <li><%= favorite.x %>, <%= favorite.y %></li>
+      <% end %>
+    </ul>
   </body>
 </html>

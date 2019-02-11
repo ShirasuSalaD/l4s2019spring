@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_06_204601) do
+ActiveRecord::Schema.define(version: 2019_02_11_084603) do
 
   create_table "histories", force: :cascade do |t|
     t.float "x"
     t.float "y"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "favorite", default: false
   end
 
 end
