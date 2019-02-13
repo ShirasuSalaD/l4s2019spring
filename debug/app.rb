@@ -16,7 +16,6 @@ end
 
 post '/posts/:id/comment' do
   post = Post.find(params[:id])
-  post.comments.create(body: params[:comment])
-  binding.pry
+  post.comments.create(body: params[:body])
   redirect '/'
 end
