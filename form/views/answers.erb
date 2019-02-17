@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <%# <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <title>アンケートフォーム</title>
+</head>
+<body>
+  <a href="/">トップへ戻る</a>
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span class="glyphicon glyphicon-triange-right">回答一覧</span>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <th>名前</th>
+            <th>年齢</th>
+            <th>学年</th>
+            <th>性別</th>
+            <th>日付</th>
+            <th>メールアドレス</th>
+            <th>パスワード</th>
+            <th>問い合わせ内容</th>
+          </tr>
+          <% @answers.each do |answer| %>
+          <tr>
+            <td>
+              <%= answer.name %>
+            </td>
+            <td>
+              <%= answer.age %>
+            </td>
+            <td>
+              <%= answer.grade %>
+            </td>
+            <td>
+              <%= answer.gender %>
+            </td>
+            <td>
+              <%= answer.date %>
+            </td>
+            <td>
+              <%= answer.email %>
+            </td>
+            <td>
+              <%= answer.password %>
+            </td>
+            <td>
+              <%= answer.content %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
