@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ユーザー登録</title>
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+  </head>
+  <body>
+    <form method="post" action="/signup" enctype="multipart/form-data">
+      <table>
+        <tbody>
+          <tr>
+            <td>名前: </td>
+            <td><input type="text" name="name"></td>
+          </tr>
+          <tr>
+            <td>Eメールアドレス: </td>
+            <td><input type="text" name="email"></td>
+          </tr>
+          <tr>
+            <td>パスワード: </td>
+            <td><input type="password" name="password"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" name="submit" value="登録する"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,205 @@
+/* line 13, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 14, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 15, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 16, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap {
+  color: #ed146f;
+  font-size: 16px;
+  border-bottom: none;
+  border-top: 3px solid #ed146f;
+}
+/* line 17, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header {
+  height: 96px;
+  display: block;
+  width: 90%;
+  margin: -6px auto 0;
+  padding: 0 10px;
+  background-repeat: no-repeat;
+  background-size: 500px 6px;
+  background-position: 100% 0;
+}
+/* line 18, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .logo {
+  display: inline-block;
+  float: left;
+  height: 90px;
+  padding: 15px 0;
+  margin: 6px 0 0;
+}
+/* line 19, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .logo a {
+  color: #ed8eb6;
+  /*font-family: 'Kranky', cursive;*/
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  margin: 15px 0 15px 0;
+}
+/* line 20, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .logo a .strong {
+  font-size: 40px;
+  color: #ed146f;
+}
+/* line 23, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap {
+  display: inline-block;
+  top: 35px;
+  position: relative;
+  float: right;
+  width: 500px;
+}
+/* line 24, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap a {
+  float: right;
+  margin-left: 30px;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+}
+/* line 25, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .landing-page-link:link {
+  color: #ed146f;
+}
+/* line 26, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .landing-page-link:hover {
+  color: #ed8eb6;
+}
+/* line 27, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .login-link:link {
+  color: gray;
+}
+/* line 28, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .signup-link:link {
+  color: gray;
+}
+/* line 29, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .login-link:hover {
+  color: #cccccc;
+}
+/* line 30, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#header-wrap header .header-actions-wrap .signup-link:hover {
+  color: #cccccc;
+}
+
+/* line 35, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 36, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main {
+  height: auto;
+  display: inline-block;
+  width: 70%;
+  padding-left: 20px;
+  border-left: 2px solid #eee;
+}
+/* line 37, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival {
+  font-family: 'Quicksand', 'Hiragino Kaku Gothic Pro',Meiryo,'MS PGothic',sans-serif;
+  font-size: 20px;
+  color: #ed146f;
+  margin-bottom: 10px;
+}
+/* line 38, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival .fa-paper-plane-o {
+  font-size: 28px;
+  margin: 8px 16px;
+}
+/* line 40, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival-list {
+  border-top: 1px dashed #dddddd;
+  padding: 0px 0;
+  width: 100%;
+}
+/* line 41, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival-list li {
+  display: block;
+  width: 100%;
+  border-bottom: 1px dashed #dddddd;
+  padding: 20px 0;
+}
+/* line 42, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival-list li .thumb-img {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  height: 180px;
+  background-image: url("http://msp.c.yimg.jp/yjimage?q=To10Hq4XyLFqYUU17NjZgTP8eU7uLU1v4Hqcl_Yk0GTfX_lu4L4df_nEFm_wAaGX_YcXoj3.Ir7uA_neMe33VE8.vqBsWP7Zbi.KC3hujHn_HfS2ecbnsm9svr9eoqwcxuCX0WDMWqQ44wHr8Q--&sig=138f60bg0&x=259&y=194");
+  background-size: cover;
+  border-radius: 3px;
+}
+/* line 43, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival-list li .contain {
+  display: inline-block;
+  width: 70%;
+  height: 180px;
+}
+/* line 44, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .main .new-arrival-list li .contain .title {
+  margin: 10px 20px 10px 20px;
+  color: #333;
+}
+/* line 49, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub {
+  height: auto;
+  padding-right: 15px;
+  float: left;
+  display: inline-block;
+  width: 20%;
+}
+/* line 50, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search {
+  font-family: 'Quicksand', 'Hiragino Kaku Gothic Pro',Meiryo,'MS PGothic',sans-serif;
+  font-size: 20px;
+  color: #ed146f;
+  margin-bottom: 10px;
+}
+/* line 51, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search .fa-search {
+  font-size: 28px;
+  margin: 8px 16px;
+}
+/* line 53, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search-parts-list {
+  border-top: 1px dashed #dddddd;
+  padding: 20px 0;
+}
+/* line 54, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search-parts-list li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 55, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search-parts-list li a {
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  margin-right: 20px;
+  padding-left: 40px;
+  color: #8c8c8c;
+  font-size: 12px;
+  background-repeat: no-repeat;
+}
+/* line 56, /Users/youxi/geek/app/assets/stylesheets/home.css.scss */
+#container-wrap .sub .search-parts-list li a .strong {
+  font-size: 20px;
+  color: #404040;
+}

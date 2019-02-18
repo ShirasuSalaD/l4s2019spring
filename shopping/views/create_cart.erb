@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>カートを作成する</title>
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="navbar-form navbar-left" action="/create_cart" method="post">
+        <button type="submit" class="btn btn-default">カートを作成</button>
+      </form>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>カート一覧</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Cart.all.each do |cart| %>
+            <tr>
+              <td><%= cart.id %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p>全<%= Cart.count %>カート</p>
+    </div>
+    <p><a href="/">HOME</a></p>
+  </body>
+</html>

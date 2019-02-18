@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1><%= @category.name %></h1>
+    <div class="row">
+      <% @category.items.all.each do |item| %>
+        <div class="col-md-3">
+          <div class="thumbnail"><img src="<%= item.image_url %>" alt="Thumbnail Image 1" style="width:200px;">
+            <div class="caption">
+              <h3><%= item.name %></h3>
+              <h3><%= item.price %>円</h3>
+              <form method="post" action="/add_to_cart">
+                <input type="hidden" name="name" value="<%= item.name %>">
+                <input type="hidden" name="price" value="<%= item.price %>">
+                <p><input type="submit" value="カートに入れる"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <p><a href="/">HOME</a></p>
+  </body>
+</html>

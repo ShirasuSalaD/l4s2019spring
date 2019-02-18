@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>管理者画面</title>
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>カート一覧</th>
+            <th>入っている商品番号</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Cart.all.each do |cart| %>
+            <tr>
+              <td><%= cart.id %></td>
+              <td>
+                <% CartItem.where(cart_id: cart.id).each do |ci| %>
+                  |<%= ci.item.id %> <%= ci.item.name %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p>全<%= Cart.count %>カート</p>
+    </div>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>アイテムID</th>
+            <th>アイテム名</th>
+            <th>アイテムの価格</th>
+            <th>入っているカート</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Item.all.each do |item| %>
+            <tr>
+              <td><%= item.id %></td>
+              <td><%= item.name %></td>
+              <td><%= item.price %></td>
+              <td>
+                <% CartItem.where(item_id: item.id).each do |ci| %>
+                  |カート<%= ci.cart_id %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p>全<%= Item.count %>商品</p>
+    </div>
+    <p><a href="/">HOME</a></p>
+  </body>
+</html>
