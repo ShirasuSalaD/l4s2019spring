@@ -18,14 +18,6 @@ before '/tasks' do
 end
 
 get '/' do
-  @lists=List.all
-  if  current_user.nil?
-    @tasks=Task.none#空データを渡すことによってエラーが起きない(nilだとエラーなる)
-  elsif params[:list].nil? then
-    @tasks=current_user.tasks
-  else#クエリでlistを受け取ったとき
-    @tasks=List.find(params[:list]).tasks.had_by(current_user)
-  end
   erb:index
 end
 

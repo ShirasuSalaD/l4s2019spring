@@ -1,1 +1,1 @@
-Life is Tech ! の教材で利用する `Sinatra` テンプレートです。
+Life is Tech ! のL4S5期の課題プロダクトで作成したものです。

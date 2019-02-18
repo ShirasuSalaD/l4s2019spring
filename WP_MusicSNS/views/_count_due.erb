@@ -1,8 +1,0 @@
-<li class="list-group-item"><a href="<%=url%>"><%=title%>
-<%unless current_user.nil?%>
-	<%due_over=tasks.had_by(current_user).due_over.count%>
-	<%if due_over!=0%>
-	  <span class="badge pull-right"><%=due_over%></span>
-	<%end%>
-<%end%>
-</a></li>

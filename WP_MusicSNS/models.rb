@@ -17,6 +17,7 @@ end
 # authenticateメソッドが使えるようになる (引数の文字列がパスワードと一致するとUserオブジェクトを、間違っているとfalseを返すメソッド)
 #文字列の先頭\A 　単語を構成する文字の繰り返し\w+　文字列の末尾\z
 #つまり文字の中に空白や改行とか無いよねってことができる \Zは末尾の改行を無視してしまうので小文字
+#↑もるもるつおい
 
 class Task<ActiveRecord::Base
   scope :due_over, -> {where('due_date<?',Date.today).where(completed:[nil,false])}
