@@ -7,7 +7,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :track_img_url
       t.string :sample_url
       t.text :comment
-      t.string :author
       t.integer :user_id
+      t.timestamps null: false
+    end
   end
 end
